@@ -1,0 +1,39 @@
+.review {
+    max-width: 450px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review__content {
+    padding: 27px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.review__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review__customer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#text {
+    font-size: 16px;
+    line-height: 19px;
+    font-style: italic;
+    text-align: justify;
+}
+
+.customer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
