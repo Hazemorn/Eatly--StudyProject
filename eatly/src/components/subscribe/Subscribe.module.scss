@@ -1,0 +1,65 @@
+@use '../../assets/vars' as *;
+@use '../../assets/mixins' as *;
+
+.subscribe {
+    padding: 130px 0px;
+
+    &__content {
+        background-color: var(--accent);
+        border-radius: 21px;
+        @include flex-hybrid(space-between, center);
+        padding: 0 45px;
+    
+        img {
+            position: relative;
+            top: 50px;
+        }
+    }
+    &__text {
+        padding: 45px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+        h1 {
+            color: var(--textWhite);
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 100%;
+            text-transform: uppercase;
+        }
+    }
+
+    &__email_field {
+        background-color: var(--textWhite);
+        border-radius: 10px;
+        @include flex-hybrid(space-between, unset);
+        input {
+            padding: 15px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 3%;
+            width: 190px;
+        }
+    
+        button {
+            color: var(--textWhite);
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 3%;
+            text-transform: uppercase;
+            border-radius: 8px;
+            padding: 10px 18px;
+            margin: 5px;
+            background-color: var(--accent);
+        }
+    }
+}
+
+
+
+
+
+
+

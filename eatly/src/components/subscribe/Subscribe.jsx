@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Subscribe.module.css'
+import s from './Subscribe.module.scss'
 
 const Subscribe = () => {
   return (
@@ -13,7 +13,7 @@ const Subscribe = () => {
                         <button>subscribe</button>
                     </div>
                 </div>
-                <img src='../../../homepage-image/our-top-dishes/swe-dish-01.png' className={s.subscribe__image} style={{width: '190px', height:'auto'}}/>
+                <img src='../../../homepage-image/our-top-dishes/swe-dish-01.png' style={{width: '190px', height:'auto'}}/>
             </div>
         </div>
     </section>

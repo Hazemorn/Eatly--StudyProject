@@ -1,0 +1,43 @@
+@use '../../assets/vars' as *;
+@use '../../assets/mixins' as *;
+
+.review {
+    max-width: 450px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+
+    &__content {
+        padding: 27px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    &__header {
+        @include flex-hybrid(space-between, unset);
+    }
+    &__customer {
+        @include flex-hybrid(unset, center);
+        gap: 15px;
+    }
+}
+
+
+#text {
+    font-size: 16px;
+    line-height: 19px;
+    font-style: italic;
+    text-align: justify;
+}
+
+.customer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+

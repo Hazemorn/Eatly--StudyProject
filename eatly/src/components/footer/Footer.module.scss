@@ -1,0 +1,66 @@
+@use '../../assets/vars' as *;
+@use '../../assets/mixins' as *;
+
+footer {
+    background-color: var(--grayFooter);
+    padding: 25px 0;
+
+}
+
+.logo {
+    position: relative;
+    @include flex-hybrid(unset, center);
+    span {
+        position: absolute;
+        left: 60px;
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 21px;
+    }
+}
+
+.footer {
+    &__nav {
+        @include flex-hybrid(unset, center);
+        ul {
+            @include flex-hybrid(space-between, unset);
+            flex-direction: row;
+            gap: 50px;
+            font-size: 13px;
+            line-height: 19px;
+            letter-spacing: 0%;
+            li {
+                transition: transform 0.3s;
+                &:hover {
+                  transform: translateY(-2px); 
+                }
+              }
+        }
+    }
+
+    &__top, &__bottom {
+        padding: 40px 0 20px;
+        @include flex-hybrid(space-between, unset);
+    }
+
+    &__license {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0px;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 38px;
+        a {
+            transition: transform 0.3s;
+            &:hover {
+                transform: translateY(-2px); 
+            }
+        }
+    }
+}
+
+
+
+

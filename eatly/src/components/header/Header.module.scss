@@ -1,0 +1,81 @@
+@use '../../assets/vars' as *;
+@use '../../assets/mixins' as *;
+
+.header {
+    padding: 48px 0 24px;  
+    &__nav {
+        @include flex-hybrid(space-between, center);
+        flex-direction: row;
+        padding: 24px;
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+
+            li {
+                transition: transform 0.3s;
+                &:hover {
+                  transform: translateY(-2px); 
+                }
+              }
+        }
+    }
+    &__btn {
+        display: flex;
+        gap: 50px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+
+        .login__btn {
+            color: var(--textColorHeader);
+            padding: 15px 25px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px); 
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+            }
+        }
+        
+        .signUp__btn {
+            background-color: var(--accent);
+            color: var(--textWhite);
+            padding: 15px 25px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px); 
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+            }
+            
+        }
+    }
+    &__left {
+        display: flex;
+        gap: 160px;     
+    }
+}
+
+.logo {
+    position: relative;
+    @include flex-hybrid(unset, center);
+    span {
+        position: absolute;
+        left: 60px;
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 21px;
+    }
+}
+
+
+hr {
+    width: 100%;
+    background-color: var(--textColorBody);
+    height: 1px;
+    border: none;
+}

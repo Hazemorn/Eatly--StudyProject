@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './ControlCard.module.css'
+import s from './ControlCard.module.scss'
 
 const ControlCard = () => {
   return (

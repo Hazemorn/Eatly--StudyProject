@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Review.module.css'
+import s from './Review.module.scss'
 
 const Review = ({img, name, info, text}) => {
 

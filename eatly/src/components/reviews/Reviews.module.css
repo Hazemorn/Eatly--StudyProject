@@ -1,6 +1,7 @@
 .review__content {
     display: flex;
     flex-direction: column;
+    padding-bottom: 15px;
 }
 
 .review__title {
@@ -14,7 +15,36 @@
     padding: 70px 0 55px;
 }
 
-.cards {
+/* .swiper__slide {
     display: flex;
     justify-content: space-between;
+}
+
+
+.swiper_scrollbar {
+    background: rgb(142, 135, 184);
+    height: 8px; 
+  }
+  
+  .swiper_scrollbar-drag {
+    background: var(--accent);
+    border-radius: 4px;
+  } */
+.sliderWrapper {
+    /* Вашы налады для размяшчэння слайдара на старонцы */
+    width: 100%;
+}
+
+/* Выкарыстоўваем :global, каб React не мяняў імя класа */
+:global(.custom-scrollbar) {
+    background: rgb(142, 135, 184) !important;
+    height: 8px !important;
+    position: relative; /* Важна для адлюстравання */
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+:global(.swiper-scrollbar-drag) {
+    background: var(--accent) !important;
+    border-radius: 4px;
 }

@@ -1,0 +1,37 @@
+@use '../../assets/vars' as *;
+@use '../../assets/mixins' as *;
+
+
+.ourTop {
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        @include flex-hybrid(center, unset);
+        gap: 0.5ch;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0px;
+        padding: 70px 0 55px;
+    }
+      
+    &__cards {
+        @include flex-hybrid(space-between, unset);
+        // gap: 40px; 
+    }
+
+    &__viewAll {
+        padding-top: 46px;
+        @include flex-hybrid(end, center);
+        padding-bottom: 85px;
+    }
+}
+
+hr {
+    width: 100%;
+    background-color: var(--textColorBody);
+    height: 1px;
+    border: none;
+}
