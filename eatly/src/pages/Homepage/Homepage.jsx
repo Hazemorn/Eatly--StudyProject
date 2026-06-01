@@ -1,14 +1,14 @@
 import React, {createContext} from 'react'
-import Header from '../components/header/Header';
-import s from '../styles/homepage.module.css';
-import Feature from '../components/feature/Feature';
-import OurTop from '../components/our-top/OurTop';
-import Dish from '../components/dish/Dish'
-import Restaurant from '../components/restaurant/Restaurant'
-import ControlPurchase from '../components/control-purchase/ControlPurchase';
-import Subscribe from '../components/subscribe/Subscribe';
-import Footer from '../components/footer/Footer';
-import Reviews from '../components/reviews/Reviews'
+import Header from '../../components/header/Header';
+import s from './homepage.module.scss';
+import Feature from '../../components/feature/Feature';
+import OurTop from '../../components/our-top/OurTop';
+import Dish from '../../components/dish/Dish'
+import Restaurant from '../../components/restaurant/Restaurant'
+import ControlPurchase from '../../components/control-purchase/ControlPurchase';
+import Subscribe from '../../components/subscribe/Subscribe';
+import Footer from '../../components/footer/Footer';
+import Reviews from '../../components/reviews/Reviews'
 
 export const AppContext = createContext([]);
 
@@ -50,7 +50,7 @@ const Homepage = () => {
         <div className={s.hero__content}>
           <div className={s.hero__text}>
             <div className={s.hero__info_addit}>
-                <hr/>
+                <hr className='line-separator'/>
                 <h2>over 1000 users</h2>
             </div>
             <h1>
@@ -61,9 +61,9 @@ const Homepage = () => {
               disclaimer for more details and get paychecks up to two days
               early. Get a <span>$20 bonus</span>.
             </p>
-            <div className={s.hero__btn}>
-              <button className={s.get_started__btn}>Get Started</button>
-              <button className={s.go_pro__btn}>Go Pro</button>
+            <div className={s.hero__btns}>
+              <button className={s.hero__btn_started}>Get Started</button>
+              <button className={s.hero__btn_pro}>Go Pro</button>
             </div>
             <div className={s.trustpilot__text}>
               <div className={s.trustpilot__left}>
@@ -112,10 +112,10 @@ const Homepage = () => {
                     <button className={s.mobile__btn}>
                       <p>Download</p><img src='../../../homepage-image/download-app/arrow.svg' alt='arrow'/>
                     </button>
-                    <img className={s.twisted_arrow} src='../../../homepage-image/download-app/arrow-vector.png' alt='twisted arrow'/>
+                    <img className={s.mobile__twisted_arrow} src='../../../homepage-image/download-app/arrow-vector.png' alt='twisted arrow'/>
                 </div> 
             </div>
-            <hr/>
+            <hr className='line-separator'/>
         </div>
     </section>
     <OurTop title="Restaurants">

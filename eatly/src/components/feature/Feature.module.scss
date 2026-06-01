@@ -1,0 +1,25 @@
+@use '../../assets/vars' as *;
+@use '../../assets/mixins' as *;
+
+.feature {
+    @include flex-hybrid(unset, center);
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    h1 {
+        font-family: 'Public Sans', sans-serif;
+        color: var(--textWhite);
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 54px;
+    }
+    p {
+        color: var(--textGray);
+        font-weight: 500px;
+        font-size: 14px;
+        line-height: 22px;
+        max-width: 210px;
+        white-space: pre-wrap;
+        
+    }
+}

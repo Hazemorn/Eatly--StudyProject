@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import s from "./Reviews.module.css";
 import Review from '../review/Review'
-import { AppContext } from '../../pages/Homepage.jsx';
+import { AppContext } from '../../pages/Homepage/Homepage.jsx';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar } from 'swiper/modules';

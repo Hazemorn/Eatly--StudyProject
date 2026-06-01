@@ -9,3 +9,20 @@
     justify-content: $horizontal;
     align-items: $vertical;
 }
+
+@mixin btn-hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none; 
+    &:hover {
+        transform: translateY(-2px); 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+    }
+}
+
+@mixin link-hover-effect {
+    transition: transform 0.3s;
+    &:hover {
+        transform: translateY(-2px); 
+    }
+}

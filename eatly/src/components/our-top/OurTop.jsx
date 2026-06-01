@@ -15,7 +15,7 @@ const OurTop = ({title , children}) => {
                 <p>View all</p><Arrow className='arrow' width='20px'/>
               </a>
           </div> 
-          <hr/>
+          <hr className='line-separator'/>
         </div>
     </section>
   )

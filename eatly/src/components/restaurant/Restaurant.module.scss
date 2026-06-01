@@ -1,0 +1,56 @@
+@use '../../assets/mixins' as *;
+@use '../../assets/vars' as *;
+
+.restaurant_card {
+    max-width: 400px;
+    border-radius: 21px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+    img {
+        width: 400px;
+    }
+    &__content {
+        padding: 7px 19px 13px 24px;
+        h1 {
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 30px;
+        }
+    }
+}
+
+.highlight {
+    max-width: 60px;
+    border-radius: 4px;
+    p { 
+        @include flex-hybrid(center, unset);
+        font-size: 11px;
+        padding: 3px 0;
+    }
+    &[data-status='green'] {
+        background-color: rgb(173, 235, 198);
+        color: rgba(48, 157, 91, 1);
+    }
+    &[data-status='yellow'] {
+        background-color: rgba(247, 237, 208, 1);
+        color: rgba(218, 163, 26, 1);
+    }
+    &[data-status='red'] {
+        background-color: rgba(247, 197, 186, 1);
+        color: rgba(251, 71, 29, 1);
+    }
+}
+
+.info { 
+    @include flex-hybrid(space-between, unset);
+    &__main {
+        @include flex-hybrid(unset, center);
+        flex-direction: row;
+    }
+    &__main p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+

@@ -8,7 +8,6 @@
   --cardBackColor: rgba(244, 244, 246, 1);
 }
 
-
 body {
   font-family: 'Inter', sans-serif;
   color: var(--textColorBody);
@@ -36,6 +35,13 @@ span {
 a {
   color:rgba(96, 96, 96, 1);
   text-decoration: none;
+}
+
+.line-separator {
+  width: 100%;
+  background-color: var(--textColorBody);
+  height: 1px;
+  border: none;
 }
 
  

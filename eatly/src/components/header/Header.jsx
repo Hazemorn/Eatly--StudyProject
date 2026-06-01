@@ -27,7 +27,7 @@ const Header = () => {
                   <button className={styles.signUp__btn}>Sign Up</button>
               </div>
           </div>
-          <hr/>
+          <hr className='line-separator'/>
         </div>
     </header>
     

@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './ControlPurchase.module.css'
+import s from './ControlPurchase.module.scss'
 import ControlCard from '../control-card/ControlCard'
 
 const ControlPurchase = () => {
@@ -7,15 +7,15 @@ const ControlPurchase = () => {
     <section>
         <div className="container">
             <div className={s.controlPurchase}>
-              <div className={s.purchase__content}>
-                  <div className={s.purchase__header}>
+              <div className={s.controlPurchase__content}>
+                  <div className={s.controlPurchase__header}>
                       <h1>Control <span>Purchases</span> Via Dashboard</h1>
                       <ControlCard/>
                   </div>
                   <div></div>
                 </div>
                 <div className={s.purchase_illustration__card}>
-                  <div className={s.purchase_illust__header}>
+                  <div className={s.purchase_illustration__header}>
                     <h1>Purchases</h1>
                     <div className={s.limit__selector}>
                           <p>This month</p><img src='../../../homepage-image/control-purchase/chevron-down.svg'/>
@@ -49,7 +49,7 @@ const ControlPurchase = () => {
                   </div>
                 </div>
             </div>
-            <hr/>
+            <hr className='line-separator'/>
         </div>
     </section>
   )

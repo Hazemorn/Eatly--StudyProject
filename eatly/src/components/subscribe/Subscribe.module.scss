@@ -3,13 +3,11 @@
 
 .subscribe {
     padding: 130px 0px;
-
     &__content {
         background-color: var(--accent);
         border-radius: 21px;
         @include flex-hybrid(space-between, center);
         padding: 0 45px;
-    
         img {
             position: relative;
             top: 50px;

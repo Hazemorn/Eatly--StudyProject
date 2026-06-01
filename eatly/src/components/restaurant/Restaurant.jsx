@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Restaurant.module.css'
+import s from './Restaurant.module.scss'
 
 const Restaurant = ({img, highlight, title, time, rate}) => {
    
@@ -8,7 +8,7 @@ const Restaurant = ({img, highlight, title, time, rate}) => {
     <div>
         <div className={s.restaurant_card}>
             <img src={img} alt='restaurant'/>
-            <div className={s.card__content}>
+            <div className={s.restaurant_card__content}>
                 <div className={s.highlight} data-status={highlight_status}>
                     <p>{highlight}</p>
                 </div>

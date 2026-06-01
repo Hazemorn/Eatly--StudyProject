@@ -14,10 +14,7 @@
             gap: 50px;
 
             li {
-                transition: transform 0.3s;
-                &:hover {
-                  transform: translateY(-2px); 
-                }
+                @include link-hover-effect;
               }
         }
     }
@@ -32,12 +29,7 @@
             color: var(--textColorHeader);
             padding: 15px 25px;
             border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-            &:hover {
-                transform: translateY(-2px); 
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
-            }
+            @include btn-hover-effect;
         }
         
         .signUp__btn {
@@ -45,12 +37,7 @@
             color: var(--textWhite);
             padding: 15px 25px;
             border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-            &:hover {
-                transform: translateY(-2px); 
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
-            }
+            @include btn-hover-effect;
             
         }
     }
@@ -73,9 +60,3 @@
 }
 
 
-hr {
-    width: 100%;
-    background-color: var(--textColorBody);
-    height: 1px;
-    border: none;
-}
