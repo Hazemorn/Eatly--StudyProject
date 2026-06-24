@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import s from "./Reviews.module.css";
+import s from "./Reviews.module.scss";
 import Review from '../review/Review'
 import { AppContext } from '../../pages/Homepage/Homepage.jsx';
 
@@ -14,66 +14,39 @@ const Reviews = () => {
   const {customers} = useContext(AppContext);
 
   return (
-    <section>
+    <section className={s.review}>
       <div className="container">
         <div className={s.review__content}>
           <h1 className={s.review__title}>
             <span>Customer</span> Say
           </h1>
-          {/* <div className={s.swiper}>
-            <div className={s.swiper__wrapper}>
-                <div className={s.swiper__slide}>
-                {customers.map((customer) =>
-                  <Review img={customer.img} name={customer.name} info={customer.info} text={customer.text}/>
-                )}
-                </div>
-            </div>
-            <div className={s.swiper__scrollbar}></div>
-          </div> */}
-          {/* <div className={s.swiper__slide}>
-          <Swiper
-            modules={[Scrollbar]}
-            spaceBetween={5}
-            slidesPerView={1}
-            scrollbar={{  el: '.swiper_scrollbar', draggable: true, snapOnRelease: true, dragSize: 50 }}
-            loop={true}
-            className={s.mySwiper}
-          >
-            {customers.map((customer) => (
-              <SwiperSlide key={customer.id}> 
-                <Review 
-                  img={customer.img} 
-                  name={customer.name} 
-                  info={customer.info} 
-                  text={customer.text}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          </div> */}
-    
-          <div className={s.sliderWrapper}> {/* Замест swiper__slide */}
+        
+          <div className={s.review__sliderWrapper}> 
             <Swiper
               modules={[Scrollbar]}
-              spaceBetween={5}
-              slidesPerView={1}
-              // Выкарыстоўваем радок для класа, які будзе глабальным
+              spaceBetween={0}
+              // slidesPerView={1.5}
+              slidesPerView="auto"
+              slidesOffsetAfter={800} 
               scrollbar={{ 
                 el: '.custom-scrollbar', 
                 draggable: true, 
-                snapOnRelease: true 
               }}
-              loop={true}
-              className={s.mySwiper}
+              className={s.review__my_swiper}
             >
               {customers.map((customer) => (
                 <SwiperSlide key={customer.id}> 
-                  <Review {...customer} />
+                    {({ isActive }) => (
+                        isActive ? (
+                             <Review {...customer} isActive={true} />
+                              ) : (
+                             <Review {...customer} isActive={false} />
+                        )
+                      )}
                 </SwiperSlide>
               ))}
-              {/* Скролбар павінен быць унутры або адразу пасля Swiper */}
-              <div className="custom-scrollbar"></div>
             </Swiper>
+            <div className="custom-scrollbar"></div>
           </div>
         </div>
       </div>

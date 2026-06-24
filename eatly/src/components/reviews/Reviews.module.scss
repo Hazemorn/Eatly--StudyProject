@@ -1,0 +1,46 @@
+.review {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+    
+    &__title {
+        display: flex;
+        justify-content: center;
+        gap: 0.5ch;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0px;
+        padding: 70px 0 55px;
+    }
+    &__sliderWrapper {
+        width:100%
+    }
+    &__my_swiper {
+        :global(.swiper-slide) {
+            width: 600px; 
+            @media (max-width: 768px) {
+                width: 280px;
+            }
+        }
+    }
+
+}
+
+
+:global(.custom-scrollbar) {
+    background: rgb(142, 135, 184) !important;
+    height: 8px !important;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 4px;
+    max-width: 700px;
+    margin-left: auto; 
+}
+
+:global(.swiper-scrollbar-drag) {
+    background: var(--accent) !important;
+    border-radius: 4px;
+}
